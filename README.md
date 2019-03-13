@@ -23,10 +23,10 @@ Coming soon.
 
 ```bash
 # Global installation
-npm install svg-to-vue -g
+npm install svgtovue-cli -g
 
 # Local installation
-npm install svg-to-vue -D
+npm install svgtovue-cli -D
 ```
 
 ## Usage
