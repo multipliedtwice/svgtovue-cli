@@ -4,7 +4,7 @@
 
 
 ----
-Small Node.JS library based on SVGO for creating svg-icon components for Vue.JS + vIcon.vue component.
+Small Node.JS library based on SVGO for converting svg to vue templates. + BaseIcon.vue component.
 
 ----
 ## About
@@ -23,18 +23,47 @@ Coming soon.
 
 ```bash
 # Global installation
-npm install svgtovue-cli -g
+npm i svgtovue-cli -g
 
 # Local installation
-npm install svgtovue-cli -D
+npm i svgtovue-cli -D
 ```
 
-## Usage
+## CLI Usage
 Just execute ```v-svg ./path/to/svg```. Your vue svg templates will appear at ```./path/to/templates/```.
 
-The easiest way to use results produced by this plugin is following component:
+<details>
+    <summary>
+        Click here to see expected output for svg files.
+    </summary>
 
-##### ./components/vIcon.vue
+    <template>
+        <g>
+            <path d="M14.86 8.52A2.68 2.68 0 1 0 13 7.74a2.65 2.65 0 0 0 1.86.78zm-1-3.66a1.38 1.38 0 1 1 0 1.95 1.4 1.4 0 0 1-.39-1 1.44 1.44 0 0 1 .39-.95z"/>
+            <path d="M18.42 0H1.58A1.58 1.58 0 0 0 0 1.58v16.84A1.58 1.58 0 0 0 1.58 20h16.84A1.58 1.58 0 0 0 20 18.42V1.58A1.58 1.58 0 0 0 18.42 0zm.32 18.44a.22.22 0 0 1-.22.22H1.58a.21.21 0 0 1-.22-.22V16H4.9a6.21 6.21 0 0 0 1.86-.32 6 6 0 0 0 1.68-.88l4.24-3.26a1.19 1.19 0 0 1 1.32 0l4.76 3.6zM7.66 13.8a4.47 4.47 0 0 1-1.32.68 4.82 4.82 0 0 1-1.46.26H1.26v-.22l.26-.24L6 10a1.19 1.19 0 0 1 1.58 0l2.22 2zM18.74 12v1.58l-4-3a2.34 2.34 0 0 0-1.42-.58 2.35 2.35 0 0 0-1.32.54l-1.12.86L8.4 9.18a2.43 2.43 0 0 0-3.3 0L1.26 12.8V1.58a.22.22 0 0 1 .22-.22h16.94a.22.22 0 0 1 .22.22z"/>
+        </g>
+    </template>
+
+    <script> 
+    export default { 
+        data() { 
+            return { 
+                viewbox: "0 0 20 20" 
+            }; 
+        }, 
+        mounted() {
+            this.$emit("onMounted", this.viewbox);
+            }
+        }
+    </script>
+
+</details>
+
+### Usage in Vue
+
+#### The easiest way to use results produced by this plugin is following component. Just copy and paste it, then add globally in main.js.
+
+##### ./components/BaseIcon.vue
 <details>
     <summary>
         Click here to expand. Just create file ./components/vIcon.vue with following content:
@@ -130,9 +159,9 @@ The easiest way to use results produced by this plugin is following component:
         Click here to expand. To install component globally you can add following code to your main.js
     </summary>
 
-    import vIcon from './components/vIcon.vue'
+    import vIcon from './components/BaseIcon.vue'
 
-    Vue.component("v-icon", vIcon);
+    Vue.component("v-icon", BaseIcon);
 </details>
 
 ##### Why copy&paste?

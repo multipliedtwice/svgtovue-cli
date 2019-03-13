@@ -1,7 +1,7 @@
 {
   "_from": "svgtvoue-cli",
   "name": "svgtovue-cli",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Command line interface for converting svg files to Vue.JS templates. (vue 2.x)",
   "_location": "/svgtovue",
   "_phantomChildren": {},
@@ -23,24 +23,26 @@
   },
   "preferGlobal": true,
   "keywords": [
+    "svg to vue",
+    "svg",
+    "svg template",
+    "vue",
+    "vuejs",
     "front-end",
     "node js",
     "web",
-    "vue",
-    "vuejs",
-    "svg",
-    "svg to vue",
-    "svg template",
     "inline svg",
     "manage svg",
-    "icons plugin"
+    "icons plugin",
+    "svg to vue cli",
+    "svgo"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/"
+    "url": "https://github.com/thousandsofraccoons/svgtovue-cli"
   },
   "bugs": {
-    "url": "https://github.com/"
+    "url": "https://github.com/thousandsofraccoons/svgtovue-cli/issues"
   },
   "engines": {
     "node": ">=6.0.0"
@@ -50,7 +52,7 @@
     "email": "thousandsofraccoons@mail.ru",
     "url": "https://www.upwork.com/freelancers/~0189406b9184f2d087"
   },
-  "homepage": "https://www.maqe.com/",
+  "homepage": "https://github.com/thousandsofraccoons/svgtovue-cli",
   "license": "MIT",
   "devDependencies": {
     "@sindresorhus/slugify": "^0.8.0",
