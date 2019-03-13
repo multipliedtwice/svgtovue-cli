@@ -1,7 +1,7 @@
 {
   "_from": "svgtvoue-cli",
   "name": "svgtovue-cli",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Command line interface for converting svg files to Vue.JS templates. (vue 2.x)",
   "_location": "/svgtovue",
   "_phantomChildren": {},
