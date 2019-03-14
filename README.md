@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/badge/WAI--ARIA-support-green.svg)
 
-Language: [RU](./README.ru.md)  [EN](./README.md)
+Language: [RU](https://github.com/thousandsofraccoons/svgtovue-cli/blob/master/readme.ru.md)  [EN](https://github.com/thousandsofraccoons/svgtovue-cli/blob/master/README.md)
 
 ----
 Small Node.JS library based on SVGO for converting svg to vue templates. + BaseIcon.vue component.
