@@ -5,34 +5,34 @@
 [RU](./readme.ru.md)  [EN](./README.md)
 
 ----
-Small Node.JS library based on SVGO for converting svg to vue templates. + BaseIcon.vue component.
+Компактная Node.JS библиотека, базирующаяся на SVGO, для конвертирования SVG файлов во Vue.JS шаблоны. + BaseIcon.vue компонент.
 
 ----
 ## About
-- icons will be added to components automatically (no need to import it)
-- no ```v-html``` used
-- 834 bytes Gzipped
-- automatic optimization of SVG
-- fully customizable template
-- viewbox will be added automatically
-- no dependencies
-- WAI-ARIA ready
+- иконки будут добавлены в ваши компоненты автоматически (не нужно их импортировать вручную)
+- ```v-html``` не используется
+- 834 байт после Gzip сжатия
+- автоматическая оптимизация SVG
+- полностью настраиваемый шаблон
+- viewbox будет добавлен автоматически
+- отсутствие зависимостей
+- поддержка WAI-ARIA
 
 
 ## Demo
-Coming soon.
+Скоро добавлю.
 
 ```bash
-# Global installation
+# Глобальная установка
 npm i svgtovue-cli -g
 ```
 
-## CLI Usage
-Just execute ```v-svg ./path/to/svg```. Your vue svg templates will appear at ```./path/to/templates/```.
+## Использование в командной строке
+Просто выполните ```v-svg ./path/to/svg```. Ваши Vue шаблоны появятся в папке ```./path/to/templates/```.
 
 <details>
     <summary>
-        Click here to see expected output for svg files.
+        Нажмите здесь, чтобы увидеть пример ожидаемого результата работы библиотеки.
     </summary>
 
     <template>
@@ -57,14 +57,14 @@ Just execute ```v-svg ./path/to/svg```. Your vue svg templates will appear at ``
 
 </details>
 
-### Usage in Vue
+### Использование во Vue
 
-#### The easiest way to use results produced by this plugin is following component. Just copy and paste it, then add globally in main.js.
+#### Простейший способ использовать полученные компоненты - использовать нижеследующий код. Просто скопируйте код и добавьте его глобально в main.js
 
 ##### ./components/BaseIcon.vue
 <details>
     <summary>
-        Click here to expand. Just create file ./components/BaseIcon.vue with following content:
+        Нажмите здесь, чтобы развернуть. Просто создайте ./components/BaseIcon.vue со следующим содержимым:
     </summary>
 
     <template>
@@ -93,7 +93,7 @@ Just execute ```v-svg ./path/to/svg```. Your vue svg templates will appear at ``
         data() {
             return {
                 component: () =>
-                    /* specify path to generated templates here */
+                    /* Укажите необходимую директорию вместо ../templates/ */
                     import('../templates/' + this.it + ".vue")
                     .then((template) => {
                         return template;
@@ -157,7 +157,7 @@ Just execute ```v-svg ./path/to/svg```. Your vue svg templates will appear at ``
 
     Vue.component("v-icon", BaseIcon);
 
-##### Why copy&paste?
+##### Зачем копипаст?
 Unfortunately I haven't found any appropriate way to pack it as npm plugin because ```() => import()``` currently doesn't allow to use fully dynamic paths. Any advice would be greatly appreciated.
 
 ## Usage of v-icon
