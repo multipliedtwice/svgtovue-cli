@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/badge/WAI--ARIA-support-green.svg)
 
-Change language: [RU](https://github.com/thousandsofraccoons/svgtovue-cli/blob/master/readme.ru.md) 
+Change language: [RU](https://github.com/thousandsofraccoons/svgtovue-cli/blob/master/readme.ru.md)
 
 ----
 Small Node.JS library based on SVGO for converting svg to vue templates. + BaseIcon.vue component.
@@ -10,6 +10,7 @@ Small Node.JS library based on SVGO for converting svg to vue templates. + BaseI
 ----
 ## About
 - icons will be added to components automatically (no need to import it)
+- SSR & Nuxt ready
 - no ```v-html``` used
 - 834 bytes Gzipped
 - automatic optimization of SVG
@@ -20,7 +21,7 @@ Small Node.JS library based on SVGO for converting svg to vue templates. + BaseI
 
 
 ## Demo
-Coming soon.
+[CodeSandBox](https://codesandbox.io/s/40xr5nv8w7)
 
 ```bash
 # Global installation
@@ -169,10 +170,10 @@ Default size is 24 x 24.
 <v-icon it="arrow"/>
 ```
 
-Of course, component can be used as 
+Of course, component can be used as
 ```html
-<vIcon 
-    it="star" 
+<vIcon
+    it="star"
     color="#42b983"
     height="200"
     width="200">
