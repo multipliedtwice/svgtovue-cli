@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/badge/WAI--ARIA-support-green.svg)
 
-Язык: [RU](https://github.com/thousandsofraccoons/svgtovue-cli/blob/master/readme.ru.md)  [EN](https://github.com/thousandsofraccoons/svgtovue-cli/blob/master/README.md)
+Сменить язык: [EN](https://github.com/thousandsofraccoons/svgtovue-cli/blob/master/README.md)
 
 ----
 Компактная Node.JS библиотека, базирующаяся на SVGO, для конвертирования SVG файлов во Vue.JS шаблоны. + BaseIcon.vue компонент.
@@ -94,7 +94,7 @@ npm i svgtovue-cli -g
             return {
                 component: () =>
                     /* Укажите относительный путь к директории c шаблонами */
-                    import('../templates/' + this.it + ".vue")
+                    import('./templates/' + this.it + ".vue")
                     .then((template) => {
                         return template;
                     }),
@@ -166,12 +166,15 @@ npm i svgtovue-cli -g
 
 Значение параметра ``it`` должно быть идентично имени шаблона *.vue, который сгенерирован библиотекой.
 ```html
-<v-icon
-    it="arrow"
-    color="#42b983"
-    height="200"
-    width="200"
-/>
+<v-icon it="arrow"/>
 ```
 
-Конечно, такой способ записи также приемлем: ```<vIcon it="star"></vIcon>```,
+Конечно, такой способ записи также приемлем: 
+```html
+<vIcon 
+    it="star" 
+    color="#42b983"
+    height="200"
+    width="200">
+</vIcon>
+```
