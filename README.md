@@ -16,7 +16,6 @@ Small Node.JS library based on SVGO for converting svg to vue templates. + BaseI
 - automatic optimization of SVG
 - fully customizable template
 - viewbox will be added automatically
-- no dependencies
 - WAI-ARIA ready
 
 
