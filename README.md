@@ -161,7 +161,7 @@ Just execute ```v-svg ./path/to/svg```. Your vue svg templates will appear at ``
 ##### Why copy&paste?
 Unfortunately I haven't found any appropriate way to pack it as npm plugin because ```() => import()``` currently doesn't allow to use fully dynamic paths. Any advice would be greatly appreciated.
 
-## Usage of <v-icon/>
+## Usage of v-icon
 
 Default size is 24 x 24.
 
@@ -179,3 +179,7 @@ Of course, component can be used as
     width="200">
 </vIcon>
 ```
+
+## TODO
+- GUI
+- v-icon component generator
