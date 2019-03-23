@@ -72,7 +72,6 @@ npm i svgtovue-cli -g
         :height="height"
         :width="width"
         :viewBox="viewbox"
-        :id="id"
         :aria-labelledby="title"
         :aria-describedby="desc"
         :role="role"
@@ -105,9 +104,6 @@ npm i svgtovue-cli -g
             it: {
                 type: String,
                 default: "default"
-            },
-            id: {
-                type: String,
             },
             desc: {
                 type: String,
