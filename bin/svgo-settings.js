@@ -68,8 +68,6 @@ module.exports = function(options) {
 				sortAttrs: true,
 			},{
 				removeDimensions: true,
-			},{
-				removeAttrs: {attrs: "(stroke|fill)"},
 			}
 		]
 	};

@@ -3,7 +3,19 @@ const svgoSettings = require("./svgo-settings.js");
 const cheerio = require("cheerio");
 
 const getViewbox = function(viewbox){
-	return `<script> export default { data() { return { viewbox: '${viewbox}' } }, mounted() {this.$emit('onMounted', this.viewbox);}}</script>`;
+  return `
+<script>
+export default {
+  data() {
+    return {
+      viewbox: '${viewbox}',
+    };
+  },
+  mounted() {
+    this.$emit('onMounted', this.viewbox);
+  },
+};
+</script>`;
 };
 
 module.exports = function(data, pathToFile, svgoOptions) {
@@ -23,9 +35,15 @@ module.exports = function(data, pathToFile, svgoOptions) {
 				template;
 
 			if ( paths.length > 1 ) {
-				template = `<template><g>${pathsToString}</g></template>${getViewbox(viewbox)}`;
+        template = `<!-- eslint-disable -->
+<template><g>${pathsToString}</g></template>
+${getViewbox(viewbox)}
+`;
 			} else {
-				template = `<template>${pathsToString}</template>${getViewbox(viewbox)}`;
+        template = `<!-- eslint-disable -->
+<template>${pathsToString}</template>
+${getViewbox(viewbox)}
+`;
 			}
 			return {template, viewbox};
 		}
