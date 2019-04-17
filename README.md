@@ -9,14 +9,21 @@ Small Node.JS library based on SVGO for converting svg to vue templates. + BaseI
 
 ----
 ## About
-- icons will be added to components automatically (no need to import it)
-- SSR & Nuxt ready
-- no ```v-html``` used
-- 834 bytes Gzipped
-- automatic optimization of SVG
-- fully customizable template
-- viewbox will be added automatically
-- WAI-ARIA ready
+:mag: icons will be added to components automatically (no need to import it)
+
+:v: SSR & Nuxt ready
+
+:lock: no ```v-html``` used
+
+:boom: 834 bytes Gzipped
+
+:hocho: automatic optimization of SVG
+
+:performing_arts: fully customizable template
+
+:wink: viewbox will be added automatically
+
+:innocent: WAI-ARIA ready
 
 
 ## Demo
@@ -152,7 +159,7 @@ Just execute ```v-svg ./path/to/svg```. Your vue svg templates will appear at ``
 
     Vue.component("v-icon", BaseIcon);
 
-##### Why copy&paste?
+##### Why copy&paste? :rage:
 Unfortunately I haven't found any appropriate way to pack it as npm plugin because ```() => import()``` currently doesn't allow to use fully dynamic paths. Any advice would be greatly appreciated.
 
 ## Usage of v-icon
