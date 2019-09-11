@@ -1,21 +1,10 @@
 const SVGO = require("svgo");
 const svgoSettings = require("./svgo-settings.js");
 const cheerio = require("cheerio");
+const scriptTag = require('./exports/script');
 
 const getViewbox = function(viewbox){
-  return `
-<script>
-export default {
-  data() {
-    return {
-      viewbox: '${viewbox}',
-    };
-  },
-  mounted() {
-    this.$emit('onMounted', this.viewbox);
-  },
-};
-</script>`;
+  return scriptTag(viewbox);
 };
 
 module.exports = function(data, pathToFile, svgoOptions) {
